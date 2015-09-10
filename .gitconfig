@@ -1,0 +1,87 @@
+[user]
+	email = samir@djellil.com
+	name = Samir Djellil
+
+[core]
+	editor = atom --wait
+	excludesfile = .gitignore-global
+	whitespace = space-before-tab trailing-space tabwidth=4
+
+[alias]
+	a = add
+	aa = add --all
+	b = branch
+	c = commit
+	ca = commit --all
+	co = checkout
+	d = diff
+	dd = diff --color-words
+	hard = reset --hard
+	ignored = ls-files --ignored --others --exclude-standard --directory
+	l = log --graph --all --pretty=log
+	ll = log --stat --abbrev-commit
+	s = status --short --branch --untracked-files=all
+
+[branch]
+	# when branching off a remote branch, automatically let the local branch
+	# track the remote branch
+	autosetupmerge = true
+	autosetuprebase = always
+
+[clean]
+	# do not require --force parameter
+	requireForce = false
+
+# retrieve and store user credentials from system-specific helpers
+[credential]
+	helper = osxkeychain
+
+[diff]
+	# use mnemonic prefixes ("i"ndex, "w"ork tree, "c"ommit, "o"bject)
+	# instead of the standard "a" and "b" notation
+	mnemonicprefix = true
+	# basic rename and copy detection
+	renames = copies
+
+[merge]
+	# show a diffstat at the end of the merge
+	stat = true
+
+[pretty]
+	# color formatting for the `l` command alias
+	log = format:%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset
+
+[push]
+	# push/pull the current branch to/from its upstream branch
+	default = upstream
+
+# Colors and Font Styles Cheat Sheet
+# ----------------------------------
+# normal, red, green, yellow, blue, magenta, cyan, white, black
+# bold, dim, ul, blink, reverse
+
+[color]
+	# use colored output, if possible
+	ui = always
+
+[color "branch"]
+	current = green bold
+	local = yellow
+	remote = red
+	plain = cyan
+
+[color "diff"]
+	meta = yellow
+	frag = cyan reverse
+	old = red
+	new = green
+	whitespace = red reverse
+	plain = normal
+	commit = yellow
+
+[color "status"]
+	added = green
+	updated = green bold
+	changed = yellow bold
+	untracked = cyan bold
+	nobranch = red
