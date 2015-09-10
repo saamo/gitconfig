@@ -52,8 +52,8 @@
 	log = format:%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset
 
 [push]
-	# push/pull the current branch to/from its upstream branch
-	default = upstream
+	# push/pull the current branch to/from the remote branch with the same name
+	default = current
 
 # Colors and Font Styles Cheat Sheet
 # ----------------------------------
