@@ -1,6 +1,6 @@
 [user]
-	email = samir@djellil.com
-	name = Samir Djellil
+	email =
+	name =
 
 [core]
 	editor = atom --wait
@@ -10,16 +10,21 @@
 [alias]
 	a = add
 	aa = add --all
+	amend = commit --amend -C head
 	b = branch
 	c = commit
 	ca = commit --all
+	clean = clean --force -d
 	co = checkout
 	d = diff
 	dd = diff --color-words
+	f = fetch
 	hard = reset --hard
 	ignored = ls-files --ignored --others --exclude-standard --directory
 	l = log --graph --all --pretty=log
 	ll = log --stat --abbrev-commit
+	r = reset
+	reb = rebase
 	s = status --short --branch --untracked-files=all
 	st = stash
 
